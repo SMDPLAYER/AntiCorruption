@@ -1,8 +1,10 @@
-package com.lucmef.anticorruption
+package com.lucmef.anticorruption.main
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.lucmef.anticorruption.R
+import com.lucmef.anticorruption.start.ScreenSecond
 import kotlinx.android.synthetic.main.screen_four.*
 
 /**
@@ -12,7 +14,7 @@ class ScreenFour :Fragment(R.layout.screen_four){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnFour.setOnClickListener {
-            parentFragmentManager.beginTransaction().replace(R.id.mainContainer,ScreenSecond()).commit()
+            (requireActivity() as BaseActivity).openNavView()
         }
     }
 }
