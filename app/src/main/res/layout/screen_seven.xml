@@ -5,11 +5,15 @@
     android:background="#FFFFFF"
     android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/btnSeven"
-        android:adjustViewBounds="true"
+
         android:layout_width="match_parent"
-        android:src="@drawable/img7"
+android:src="@drawable/img7"
         android:layout_height="match_parent"/>
+    <WebView
+        android:id="@+id/btnSeven"
+        android:layout_width="match_parent"
+app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
     <View
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/btnBack"

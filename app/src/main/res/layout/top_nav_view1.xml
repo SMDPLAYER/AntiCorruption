@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_ava" />
+        <LinearLayout
+            android:layout_marginStart="25dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="Sirojididn Ergashev"
+style="@style/TextAppearance.AppCompat.SearchResult.Title"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imgbalance"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

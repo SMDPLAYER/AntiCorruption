@@ -6,6 +6,7 @@ import android.view.View
 import androidx.drawerlayout.widget.DrawerLayout
 import com.bumptech.glide.Glide
 import com.lucmef.anticorruption.R
+import com.lucmef.anticorruption.main.account.ScreenEight
 import com.lucmef.anticorruption.start.ScreenFirst
 import com.lucmef.anticorruption.start.ScreenSecond
 import kotlinx.android.synthetic.main.activity_base.*
@@ -15,6 +16,7 @@ class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
         initNavView()
+        initNavView1()
         supportFragmentManager.beginTransaction().replace(R.id.mainContainer, ScreenFour()).commit()
 
     }
@@ -41,9 +43,35 @@ class BaseActivity : AppCompatActivity() {
             override fun onDrawerStateChanged(newState: Int) {}
         })
     }
+    private fun initNavView1() {
+        navView1.itemIconTintList = null
+        val header=navView.getHeaderView(0)
+
+        navView1.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.menu_point -> openBookMark0()
+                R.id.menu_book_mark -> openBookMark1()
+                R.id.menu_search -> openBookMark2()
+                R.id.menuPassword -> openBookMark3()
+//                R.id.menuSignOut -> signOut()
+            }
+            drawerLayout.closeDrawer(navView)
+            true
+        }
+        drawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener{
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {}
+            override fun onDrawerOpened(drawerView: View){  }
+            override fun onDrawerClosed(drawerView: View){}
+            override fun onDrawerStateChanged(newState: Int) {}
+        })
+    }
 
     private fun openBookMark() {
-        supportFragmentManager.beginTransaction().replace(R.id.mainContainer, ScreenFour()).commit()
+        drawerLayout.openDrawer(navView1)
+    }
+
+    private fun openBookMark0() {
+        supportFragmentManager.beginTransaction().replace(R.id.mainContainer, ScreenEight()).commit()
     }
     private fun openBookMark1() {
         supportFragmentManager.beginTransaction().replace(R.id.mainContainer, ScreenFive()).addToBackStack(null).commit()

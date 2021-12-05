@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_point"
+        android:title="Test yechish" />
+
+    <item android:id="@+id/menu_book_mark"
+        android:title="Sizning balingiz" />
+
+    <item android:id="@+id/menu_search"
+        android:title="Chatga kirish" />
+
+    <item android:id="@+id/menu_search1"
+        android:title="Bonuslar" />
+
+    <item android:id="@+id/menu_search2"
+        android:title="Savol Yuborish" />
+
+
+    <item android:id="@+id/menuPassword"
+        android:title="Parolni yangilash" />
+
+<!--    <item android:id="@+id/menuSignOut"-->
+<!--        android:icon="@drawable/ic_sign_out"-->
+<!--        android:title="@string/tvSignOut" />-->
+</menu>
