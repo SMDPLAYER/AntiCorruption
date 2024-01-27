@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_point"
+        android:icon="@drawable/ic_menu1"
+        android:title="Uy" />
+
+    <item android:id="@+id/menu_book_mark"
+        android:icon="@drawable/ic_menu2"
+        android:title="Biz haqimizda" />
+
+    <item android:id="@+id/menu_search"
+        android:icon="@drawable/ic_menu3"
+        android:title="Yangiliklar" />
+
+    <item android:id="@+id/menuHelp"
+        android:title="Maqolalar" />
+
+<!--    <item android:id="@+id/menuSignOut"-->
+<!--        android:icon="@drawable/ic_sign_out"-->
+<!--        android:title="@string/tvSignOut" />-->
+</menu>
